@@ -16,11 +16,14 @@ spring:
 
 server:
   ssl:
-    key-store-type: PKCS12
-    key-store: file:authentication.p12
-    key-store-password: ZvqgnmkW1pb3OGdr
+    key-store-type: JKS
+    key-store: file:authentication.jks
+    key-store-password: 123456
     key-password: ${server.ssl.key-store-password}
     key-alias: 1
+    trust-store-type: JKS
+    trust-store: file:truststore.jks
+    trust-store-password: 123456
     client-auth: none
     enabled: false
 
@@ -35,4 +38,7 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
 
-server.port: 0
+keygen:
+  token: onQP21Be2LvMTI3FZXs9M2zQQnEHaxAwzhQYtvi9QDUtzxJhYggZnHLpRhAZVHr2
+
+server.port: 8449
