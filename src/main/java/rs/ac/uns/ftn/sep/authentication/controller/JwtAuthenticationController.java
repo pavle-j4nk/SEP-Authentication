@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 @RequiredArgsConstructor
 @RestController
 @CrossOrigin
-
-
 public class JwtAuthenticationController {
     private final AuthenticationService authenticationService;
 

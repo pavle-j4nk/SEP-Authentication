@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@RequestMapping("")
+@RequestMapping
 @RestController
-@CrossOrigin()
+@CrossOrigin(origins = {"http://localhost:3000"})
 public class UserController {
 
     @PreAuthorize("isFullyAuthenticated()")
