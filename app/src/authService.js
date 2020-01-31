@@ -7,6 +7,10 @@ export class AuthService {
         return axiosInstance.post("/auth", credentials);
     }
 
+    register(userData) {
+        return axiosInstance.post("/register", userData);
+    }
+
     getUserInfo() {
         return JSON.parse(localStorage.getItem("userInfo"));
     }

@@ -10,6 +10,7 @@ import Notfound from "./notFound";
 import Login from "./login";
 import AuthService from "./authService";
 import Home from "./home";
+import Registration from "./registration";
 
 const routing = (
     <Router>
@@ -24,6 +25,9 @@ const routing = (
                         <NavLink href = "/login">Login</NavLink>
                     </NavItem>
                     <NavItem>
+                        <NavLink href = "/register">Register</NavLink>
+                    </NavItem>
+                    <NavItem>
                         <Button className="btn btn-primary" onClick={AuthService.logOut}>Logout</Button>
                     </NavItem>
                 </Nav>
@@ -31,6 +35,7 @@ const routing = (
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/login" component={Login}/>
+                <Route path="/register" component={Registration}/>
                 <Route component={Notfound}/>
             </Switch>
         </div>
